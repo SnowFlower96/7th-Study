@@ -22,11 +22,8 @@ public class Main_BJ_2559_수열_정원석 {
 		}
 		
 		
-//		배열 사용 //이상하게 계속 틀림 왜 틀린지 모르겠음
-		// 40퍼 에서 오류뜸...
-//		int sum_max = -101;
-//		int sum_max = Integer.MIN_VALUE; // 이걸 사용하니까 맞았다. 이유가 무엇일까??
-		// 문제에서 주어진 최소값은 -100 내가 설정한 최소값은 -101... 머야???? 이유를 모르겠네...
+//		배열 사용 
+//		int sum_max = Integer.MIN_VALUE;
 //		
 //		for(int i = 0; i <= N - term; i++) {
 //			int sum = 0;
