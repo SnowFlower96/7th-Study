@@ -20,7 +20,7 @@
 
 동굴 예제
 
-![Untitled](0316%20%E1%84%89%E1%85%B3%E1%84%90%E1%85%A5%E1%84%83%2054c1f/Untitled.png)
+![표](README/Untitled.png)
 
 만들 변수
 
