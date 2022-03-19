@@ -134,7 +134,8 @@ group by department_id;
 select manager_id, avg(salary) as "평균 급여"
 from employees
 group by manager_id
-having `평균 급여` < 7000;
+having `평균 급여` < 7000
+order by manager_id desc;
 
 # 4. employees에서 부서별로 고용일이 가장 빠른 날짜를 선택하시오. 부서번호와 고용일 출력하시오.
 select department_id, min(hire_date)
