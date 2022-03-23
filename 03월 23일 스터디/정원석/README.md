@@ -1,6 +1,6 @@
 # 뱀과 사다리 게임
 
-![Untitled](/뱀과 사다리게임/Untitled.png)
+![Untitled](README/Untitled.png)
 
 ### 문제 해석
 
