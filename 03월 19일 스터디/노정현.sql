@@ -35,27 +35,18 @@ group by countrycode;
 select ca.name, 
 ca.population "수도의 인구", count(ci.countrycode) "도시의 수"
 from city ci join (
-select country.code, country.name, ci.population
-from city ci join country
-on ci.id = country.capital) ca
+	select country.code, country.name, ci.population
+	from city ci join country
+	on ci.id = country.capital) ca
 on ci.countrycode = ca.code
 where ci.population > ca.population
 group by ci.countrycode;
-
-select ca.name, ca.population "수도의 인구", 
-ci.name "도시", ci.population "도시의 인구"
-from city ci join (
-select country.code, country.name, ci.population
-from city ci join country
-on ci.id = country.capital) ca
-on ci.countrycode = ca.code
-where ci.population > ca.population;
 
 # 5. 대륙별 국가의 숫자와 인구의 합을 출력하기, 단 국가의 수를 기준으로 내림차순 정렬
 select continent, count(code) "국가의 수", sum(population) "총 인구수"
 from country
 group by continent
-order by 2 desc;
+order by `국가의 수` desc;
 
 
 # 정원석
@@ -64,15 +55,17 @@ use ssafydb;
 select first_name, last_name, start_date
 from employees inner join job_history
 using (employee_id)
-where first_name = "david";
+where first_name = "David";
 
 #2. Seattle에서 근무하는 사원의 급여 평균을 구하세요.(소수점 두자리수까지 구하시오)
 select round(avg(salary), 2) "Seattle의 급여 평균"
 from employees
-where department_id in (select department_id
-from locations join departments
-using (location_id)
-where city = "Seattle");
+where department_id in (
+	select department_id
+	from locations join departments
+	using (location_id)
+	where city = "Seattle"
+);
 
 # 3. 'United States of America'에서 근무하는 인원의 수를 구하시오.
 select count(employee_id) "인원수"
@@ -99,9 +92,9 @@ group by country_id;
 
 # 5. (world 사용)기대수명이 70이상인 국가 중 인구수가 가장 적은 도시를 구하시오. (코드 기준으로 오름차순으로 정렬하시오) (111건)
 use world;
-select code, le.name "나라이름", ci.name "도시", population
+select code, le.name "나라이름", ci.name "도시", population, lifeexpectancy
 from city ci join (
-	select code, name
+	select code, name, LifeExpectancy
 	from country
 	where LifeExpectancy >= 70) le
 on ci.countrycode = le.code
