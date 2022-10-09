@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="JAVA_MODULE" version="4">
+  <component name="NewModuleRootManager" inherit-compiler-output="true">
+    <exclude-output />
+    <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/노정현" isTestSource="false" packagePrefix="silver.s2" />
+      <sourceFolder url="file://$MODULE_DIR$/정원석" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/허유민" isTestSource="false" packagePrefix="Baekjoon" />
+      <sourceFolder url="file://$MODULE_DIR$/허혜진" isTestSource="false" packagePrefix="study0527" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+  </component>
+</module>
